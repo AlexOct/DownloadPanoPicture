@@ -55,11 +55,11 @@ PIL_INSTALLED = False
 try:
     sys.path.append(r'C:\Users\site-packages')
     from PIL import Image # 需要下载,pip install Pillow ，注意下载位置如果无法直接导入,用上面这句话设置到下载的路径
-    import numpy as np
+    import numpy as np# 需要下载,pip install Numpy
     import re
     PIL_INSTALLED = True
 except ImportError:
-    print("Pillow is not installed. Skipping 'process_panorama_list_baidu' execution.")
+    print("Pillow or numpy is not installed. Skipping 'process_panorama_list_baidu' execution.")
     PIL_INSTALLED = False
     
 def get_coordinates_from_filename(file_path):
